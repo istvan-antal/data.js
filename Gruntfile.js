@@ -3,16 +3,16 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            files: ['Gruntfile.js', 'src/*'],
+            files: ['Gruntfile.js', 'src/*/*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
         },
         jasmine: {
             lib: {
-                src: 'src/*.js',
+                src: 'src/*/*.js',
                 options: {
-                    specs: 'tests/*Spec.js'
+                    specs: 'tests/*/*Spec.js'
                 }
             }
         }
