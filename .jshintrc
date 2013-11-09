@@ -10,5 +10,5 @@
   "boss": true,
   "eqnull": true,
   "browser": true,
-  "globals": { "module": true }
+  "globals": { "module": true, "describe": true, "it": true, "expect": true, "Data": true }
 }
