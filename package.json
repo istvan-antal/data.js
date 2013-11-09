@@ -1,0 +1,12 @@
+{
+    "name": "datajs",
+    "version": "1.0.0",
+    "description": "Data manipulation, formatting and validation library.",
+    "dependencies": {
+        "grunt": "0.4.1",
+        "grunt-contrib-jshint": "0.4.0",
+        "grunt-contrib-jasmine": "0.5.2"
+    },
+    "author": "István Miklós Antal <istvan.m.antal@gmail.com>",
+    "license": "MIT"
+}
