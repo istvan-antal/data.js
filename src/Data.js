@@ -1,6 +1,7 @@
 var Data = {
     validate: {}, 
     geometry: {},
-    geolocation: {}
+    geolocation: {},
+    format: {}
 };
 
