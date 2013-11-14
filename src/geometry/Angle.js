@@ -1,5 +1,3 @@
-var Data = Data || { validate: {}, geometry: {} };
-
 Data.geometry.Angle = {
     DEGREES_TO_RAD: 1 / 180 * Math.PI,
     /**

@@ -16,6 +16,7 @@ module.exports = function(grunt) {
             lib: {
                 src: 'src/*/*.js',
                 options: {
+                    vendor: ['src/Data.js'],
                     specs: 'tests/*/*Spec.js'
                 }
             }

@@ -1,5 +1,3 @@
-var Data = Data || { validate: {}, geometry: {} };
-
 Data.validate.Date = {
     ISO_DATE_REGEXP: /\d{4}-[01]\d-[0-3]\d/,
     /**
