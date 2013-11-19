@@ -1,3 +1,11 @@
+/*
+ * data.js
+ * 
+ * https://github.com/istvan-antal/data.js
+ *
+ * Licensed under the MIT license.
+ */
+
 Data.validate.Date = {
     ISO_DATE_REGEXP: /\d{4}-[01]\d-[0-3]\d/,
     /**

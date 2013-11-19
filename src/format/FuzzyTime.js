@@ -1,3 +1,11 @@
+/*
+ * data.js
+ * 
+ * https://github.com/istvan-antal/data.js
+ *
+ * Licensed under the MIT license.
+ */
+
 Data.format.FuzzyTime = {
     _units: {
         1: ['second', 'seconds'],

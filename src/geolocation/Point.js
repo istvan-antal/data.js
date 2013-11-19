@@ -1,3 +1,10 @@
+/*
+ * data.js
+ * 
+ * https://github.com/istvan-antal/data.js
+ *
+ * Licensed under the MIT license.
+ */
 
 Data.geolocation.Point = function (latitude, longitude) {
     if (typeof latitude !== 'number' || isNaN(latitude)) {

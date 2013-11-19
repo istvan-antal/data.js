@@ -1,3 +1,11 @@
+/*
+ * data.js
+ * 
+ * https://github.com/istvan-antal/data.js
+ *
+ * Licensed under the MIT license.
+ */
+
 Data.geometry.Point = function (x, y) {
     if (typeof x !== 'number' || isNaN(x)) {
         throw new Error('x is not a number.');

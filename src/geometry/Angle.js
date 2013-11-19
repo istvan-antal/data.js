@@ -1,3 +1,12 @@
+/*
+ * data.js
+ * 
+ * https://github.com/istvan-antal/data.js
+ *
+ * Licensed under the MIT license.
+ */
+
+
 Data.geometry.Angle = {
     DEGREES_TO_RAD: 1 / 180 * Math.PI,
     /**
