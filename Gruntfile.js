@@ -1,13 +1,9 @@
 /*global require*/
 module.exports = function(grunt) {
-    var growl = require('growl'),
-        exec = require('child_process').exec,
-        jsFiles = ['Gruntfile.js', 'src/*/*.js', 'tests/*/*Spec.js'];
-    
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            files: jsFiles,
+            files: ['Gruntfile.js', 'src/*/*.js', 'tests/*/*Spec.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
