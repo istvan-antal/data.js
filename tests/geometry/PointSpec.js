@@ -12,16 +12,25 @@ describe("Data.geometry.Point", function() {
     it("getters should return the correct values", function() {
         var point = new Data.geometry.Point(1, 2);
         
-        expect(point.getX()).toEqual(1);
-        expect(point.getY()).toEqual(2);
+        expect(point.getX()).toBe(1);
+        expect(point.getY()).toBe(2);
         
         point = new Data.geometry.Point(51.498714933833, -0.16011779913771);
         
-        expect(point.getX()).toEqual(51.498714933833);
-        expect(point.getY()).toEqual(-0.16011779913771);
+        expect(point.getX()).toBe(51.498714933833);
+        expect(point.getY()).toBe(-0.16011779913771);
     });
     
     it("should compute the correct distances", function() {
+        var a = new Data.geometry.Point(1, 2),
+            b = new Data.geometry.Point(1, 2),
+            c = new Data.geometry.Point(2, 2),
+            d = new Data.geometry.Point(2, 3);
+            
+        expect(a.getDistance(b)).toBe(0);
+        expect(a.getDistance(c)).toBe(1);
+        expect(a.getDistance(d)).toBe(1.4142135623730951);
+        expect(c.getDistance(d)).toBe(1);
     });
     
 });

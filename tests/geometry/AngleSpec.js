@@ -10,10 +10,10 @@ describe("Angle utilities", function() {
     });
     
     it("should work for known results", function() {
-        expect(Data.geometry.Angle.getRadiansFromDegrees(0)).toEqual(0);
-        expect(Data.geometry.Angle.getRadiansFromDegrees(45)).toEqual(1 / 4 * Math.PI);
-        expect(Data.geometry.Angle.getRadiansFromDegrees(90)).toEqual(1 / 2 * Math.PI);
-        expect(Data.geometry.Angle.getRadiansFromDegrees(180)).toEqual(1 * Math.PI);
-        expect(Data.geometry.Angle.getRadiansFromDegrees(360)).toEqual(2 * Math.PI);
+        expect(Data.geometry.Angle.getRadiansFromDegrees(0)).toBe(0);
+        expect(Data.geometry.Angle.getRadiansFromDegrees(45)).toBe(1 / 4 * Math.PI);
+        expect(Data.geometry.Angle.getRadiansFromDegrees(90)).toBe(1 / 2 * Math.PI);
+        expect(Data.geometry.Angle.getRadiansFromDegrees(180)).toBe(1 * Math.PI);
+        expect(Data.geometry.Angle.getRadiansFromDegrees(360)).toBe(2 * Math.PI);
     });
 });
