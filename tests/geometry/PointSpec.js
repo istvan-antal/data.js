@@ -21,6 +21,11 @@ describe("Data.geometry.Point", function() {
         expect(point.getY()).toBe(-0.16011779913771);
     });
     
+    it("should be able to determine if two points are equal", function() {
+        expect((new Data.geometry.Point(1, 2)).isEqual(new Data.geometry.Point(1, 2))).toBe(true);
+        expect((new Data.geometry.Point(1, 2)).isEqual(new Data.geometry.Point(1, 4))).toBe(false);
+    });
+    
     it("should compute the correct distances", function() {
         var a = new Data.geometry.Point(1, 2),
             b = new Data.geometry.Point(1, 2),

@@ -40,10 +40,13 @@ Data.geometry.Point.prototype.getY = function () {
 /**
  * Tells if the two points are equal.
  * 
+ * @param {Data.geometry.Point} point
+ * 
  * @returns {boolean}
  */
 Data.geometry.Point.prototype.isEqual = function (point) {
-    
+    return this.getX() === point.getX() &&
+           this.getY() === point.getY();
 };
 
 /**
