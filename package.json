@@ -2,7 +2,14 @@
     "name": "datajs",
     "version": "1.0.0",
     "description": "Data manipulation, formatting and validation library.",
-    "dependencies": {
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/istvan-antal/data.js.git"
+    },
+    "scripts": {
+        "test": "grunt check"
+    },
+    "devDependencies": {
         "grunt": "0.4.1",
         "grunt-contrib-jshint": "*",
         "grunt-contrib-jasmine": "0.5.2"
