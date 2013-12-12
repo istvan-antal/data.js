@@ -19,10 +19,16 @@ Data.geolocation.Point = function (latitude, longitude) {
     this._longitude = longitude;
 };
 
+/**
+ * @returns {number}
+ */
 Data.geolocation.Point.prototype.getLatitude = function () {
     return this._latitude;
 };
 
+/**
+ * @returns {number}
+ */
 Data.geolocation.Point.prototype.getLongitude = function () {
     return this._longitude;
 };
@@ -31,7 +37,7 @@ Data.geolocation.Point.prototype.getLongitude = function () {
  * Returns the distance from another point in kilometers.
  * 
  * @param {Data.geolocation.Point} point
- * @returns {Number}
+ * @returns {number}
  */
 Data.geolocation.Point.prototype.getDistanceFrom = function (point) {
     var acos = Math.acos,
