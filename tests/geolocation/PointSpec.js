@@ -32,6 +32,6 @@ describe("Data.geolocation.Point", function() {
         a = new Data.geolocation.Point(51.528376683829, -0.12758298126883);
         b = new Data.geolocation.Point(51.529901246664, -0.12442987349065);
             
-        expect(a.getDistanceFrom(b)).toEqual(0.2762509836594826);
+        expect(Math.floor(a.getDistanceFrom(b) * 10000) / 10000).toEqual(0.2762);
     });
 });
