@@ -10,5 +10,8 @@
   "boss": true,
   "eqnull": true,
   "browser": true,
+  "maxcomplexity": 7,
+  "maxlen": 100,
+  "trailing": true,
   "globals": { "module": true, "describe": true, "it": true, "expect": true, "Data": true }
 }

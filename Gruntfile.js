@@ -1,11 +1,20 @@
 /*global require*/
 module.exports = function(grunt) {
+    var jsFiles = ['Gruntfile.js', 'src/*/*.js', 'tests/*/*Spec.js'];
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            files: ['Gruntfile.js', 'src/*/*.js', 'tests/*/*Spec.js'],
+            files: jsFiles,
             options: {
                 jshintrc: '.jshintrc'
+            }
+        },
+        jscs: {
+            src: jsFiles,
+            options: {
+                config: ".jscs.json",
+                requireCurlyBraces: [ "if" ]
             }
         },
         jasmine: {
@@ -21,7 +30,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-jscs-checker');
 
-    grunt.registerTask("check", ["jshint", "jasmine"]);
+    grunt.registerTask("check", ["jshint", "jscs", "jasmine"]);
     grunt.registerTask("default", ["check"]);
 };
