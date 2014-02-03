@@ -10,11 +10,11 @@ Data.geometry.Point = function (x, y) {
     if (typeof x !== 'number' || isNaN(x)) {
         throw new Error('x is not a number.');
     }
-    
+
     if (typeof y !== 'number' || isNaN(y)) {
         throw new Error('y is not a number.');
     }
-    
+
     this._x = x;
     this._y = y;
 };
@@ -56,5 +56,6 @@ Data.geometry.Point.prototype.isEqual = function (point) {
  * @returns {number}
  */
 Data.geometry.Point.prototype.getDistance = function (point) {
-    return Math.sqrt(Math.pow(point.getX() - this.getX(), 2) + Math.pow(point.getY() - this.getY(), 2));
+    return Math.sqrt(Math.pow(point.getX() - this.getX(), 2) +
+            Math.pow(point.getY() - this.getY(), 2));
 };

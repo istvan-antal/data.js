@@ -145,8 +145,8 @@ Data.geometry.Rectangle.prototype.isIntersectingWithRectangle = function(rectang
  */
 Data.geometry.Rectangle.prototype.isContainingRectangle = function(rectangle) {
     return (this.getTop() <= rectangle.getTop() &&
-            this.getLeft() <= rectangle.getLeft() && 
-            this.getRight() >= rectangle.getRight() && 
+            this.getLeft() <= rectangle.getLeft() &&
+            this.getRight() >= rectangle.getRight() &&
             this.getBottom() >= rectangle.getBottom()
            );
 };

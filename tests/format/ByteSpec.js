@@ -12,26 +12,26 @@ describe("Data.format.Bytes", function() {
         expect(function () { Data.format.Byte.getByteString(NaN); }).toThrow();
         expect(function () { Data.format.Byte.getByteString([]); }).toThrow();
     });
-    
+
     it("should handle 0", function() {
         expect(Data.format.Byte.getByteString(0)).toBe('0B');
     });
-    
+
     it("should handle gigabytes", function() {
         expect(Data.format.Byte.getByteString(1 * gb)).toBe('1GB');
         expect(Data.format.Byte.getByteString(10 * gb)).toBe('10GB');
     });
-    
+
     it("should handle megabytes", function() {
         expect(Data.format.Byte.getByteString(1 * mb)).toBe('1MB');
         expect(Data.format.Byte.getByteString(1.5 * mb)).toBe('1.5MB');
     });
-    
+
     it("should handle gigabytes", function() {
         expect(Data.format.Byte.getByteString(1 * gb)).toBe('1GB');
         expect(Data.format.Byte.getByteString(10 * gb)).toBe('10GB');
     });
-    
+
     it("should work for negative values", function() {
         expect(Data.format.Byte.getByteString(-1)).toBe('-1B');
         expect(Data.format.Byte.getByteString(-10 * 60)).toBe('-600B');

@@ -10,11 +10,11 @@ Data.geolocation.Point = function (latitude, longitude) {
     if (typeof latitude !== 'number' || isNaN(latitude)) {
         throw new Error('latitude is not a number.');
     }
-    
+
     if (typeof longitude !== 'number' || isNaN(longitude)) {
         throw new Error('longitude is not a number.');
     }
-    
+
     this._latitude = latitude;
     this._longitude = longitude;
 };
@@ -51,9 +51,9 @@ Data.geolocation.Point.prototype.getDistanceFrom = function (point) {
     if (!(point instanceof Data.geolocation.Point)) {
         throw new Error('point is of invalid type');
     }
-    
+
     return acos(
-            sin(aLat) * sin(bLat) + 
-            cos(aLat) * cos(bLat) * cos(bLng - aLng)) * 
+            sin(aLat) * sin(bLat) +
+            cos(aLat) * cos(bLat) * cos(bLng - aLng)) *
     6371;
 };

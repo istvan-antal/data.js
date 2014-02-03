@@ -8,7 +8,7 @@ describe("Angle utilities", function() {
         expect(function () { Data.geometry.Angle.getRadiansFromDegrees([]); }).toThrow();
         expect(function () { Data.geometry.Angle.getRadiansFromDegrees(NaN); }).toThrow();
     });
-    
+
     it("should work for known results", function() {
         expect(Data.geometry.Angle.getRadiansFromDegrees(0)).toBe(0);
         expect(Data.geometry.Angle.getRadiansFromDegrees(45)).toBe(1 / 4 * Math.PI);

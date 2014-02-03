@@ -27,35 +27,35 @@ Data.format.Byte = {
      */
     getByteString: function (amount) {
         var i;
-        
+
         if (typeof amount !== 'number' || isNaN(amount)) {
             throw new Error('Only numbers are accepted');
         }
-        
+
         i = this._lengths.length - 1;
-        
+
         while (amount / this._lengths[i].size < 1 && i !== 0) {
             i -= 1;
         }
-        
-        return String(Math.floor(amount / this._lengths[i].size * 100) / 100) + this._units[this._lengths[i].power] + 'B';
+
+        return String(Math.floor(amount / this._lengths[i].size * 100) / 100) +
+                this._units[this._lengths[i].power] + 'B';
     }
 };
 
-
 (function () {
     var i;
-    
+
     for (i in Data.format.Byte._units) {
         if (Data.format.Byte._units.hasOwnProperty(i)) {
             Data.format.Byte._lengths.push({ power: parseInt(i, 10) });
         }
     }
-    
+
     Data.format.Byte._lengths.forEach(function (length) {
         length.size = Math.pow(1024, length.power);
     });
-    
+
     /*
      * Ensure that our keys array is sorted, because the JS runtime does 
      * not guarranty the order on which the for in iterator returns the keys. 
