@@ -40,6 +40,10 @@ Data.geolocation.Point.prototype.getLongitude = function () {
  * @returns {number}
  */
 Data.geolocation.Point.prototype.getDistanceFrom = function (point) {
+    if (!(point instanceof Data.geolocation.Point)) {
+        throw new Error('point is of invalid type');
+    }
+
     var acos = Math.acos,
         sin = Math.sin,
         cos = Math.cos,
@@ -47,10 +51,6 @@ Data.geolocation.Point.prototype.getDistanceFrom = function (point) {
         aLng = Data.geometry.Angle.getRadiansFromDegrees(this.getLongitude()),
         bLat = Data.geometry.Angle.getRadiansFromDegrees(point.getLatitude()),
         bLng = Data.geometry.Angle.getRadiansFromDegrees(point.getLongitude());
-
-    if (!(point instanceof Data.geolocation.Point)) {
-        throw new Error('point is of invalid type');
-    }
 
     return acos(
             sin(aLat) * sin(bLat) +

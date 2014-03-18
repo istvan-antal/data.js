@@ -15,6 +15,7 @@
  * @param {number} height
  */
 Data.geometry.Rectangle = function(x, y, width, height) {
+    /* jshint maxcomplexity: 11 */
     if (typeof x !== 'number' || isNaN(x)) {
         throw new Error('x is not a number.');
     }

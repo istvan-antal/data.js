@@ -33,9 +33,11 @@ describe("Date validator", function() {
 
     it("should approve proper formats", function() {
         expect(Data.validate.Date.verifyISODateString('2001-01-01').isValid).toBe(true);
+        expect(Data.validate.Date.verifyISODateString('2000-02-29').isValid).toBe(true);
     });
 
     it("should reject proper formats but invalid dates", function() {
+        expect(Data.validate.Date.verifyISODateString('2001-02-29').isValid).toBe(false);
         expect(Data.validate.Date.verifyISODateString('2001-00-01').isValid).toBe(false);
         expect(Data.validate.Date.verifyISODateString('2001-02-30').isValid).toBe(false);
         expect(Data.validate.Date.verifyISODateString('2001-04-31').isValid).toBe(false);

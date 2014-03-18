@@ -1,4 +1,3 @@
-/* global Data.format.FuzzyTime,describe,it,expect */
 describe("Data.format.FuzzyTime", function() {
     /* jshint maxlen: 180 */
     var minute = 60,

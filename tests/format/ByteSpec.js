@@ -1,5 +1,4 @@
-/* global Data.format.Bytes */
-describe("Data.format.Bytes", function() {
+describe("Data.format.Byte", function() {
     var kb = 1024,
         mb = kb * 1024,
         gb = mb * 1024;

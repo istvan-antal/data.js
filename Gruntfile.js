@@ -1,4 +1,4 @@
-/*global require*/
+/* global require */
 module.exports = function(grunt) {
     var jsFiles = ['Gruntfile.js', 'src/*/*.js', 'tests/*/*Spec.js'];
 
@@ -22,7 +22,31 @@ module.exports = function(grunt) {
                 src: 'src/*/*.js',
                 options: {
                     vendor: ['src/Data.js'],
-                    specs: 'tests/*/*Spec.js'
+                    specs: 'tests/*/*Spec.js',
+                    template: require('grunt-template-jasmine-istanbul'),
+                    templateOptions: {
+                        coverage: 'reports/coverage.json',
+                        thresholds: {
+                            lines: 100,
+                            statements: 100,
+                            branches: 100,
+                            functions: 100
+                        },
+                        report: [
+                            {
+                                type: 'text'
+                            },
+                            {
+                                type: 'text-summary'
+                            },
+                            {
+                                type: 'html',
+                                options: {
+                                    dir: 'reports/coverage'
+                                }
+                            }
+                        ]
+                    }
                 }
             }
         }

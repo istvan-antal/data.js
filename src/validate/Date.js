@@ -35,7 +35,7 @@ Data.validate.Date = {
      * @returns {Object}
      */
     verifyISODateString: function(dateString) {
-        /* jshint maxcomplexity: 8 */
+        /* jshint maxcomplexity: 15 */
         var parts,
             year,
             isLeapYear,
@@ -73,12 +73,6 @@ Data.validate.Date = {
         isLeapYear = (((year % 4) === 0) && ((year % 100) !== 0) || ((year % 400) === 0));
 
         if (month < 1 || month > 12) {
-            result.message = 'Please enter a valid date.';
-            result.isValid = false;
-            return result;
-        }
-
-        if (day < 1) {
             result.message = 'Please enter a valid date.';
             result.isValid = false;
             return result;

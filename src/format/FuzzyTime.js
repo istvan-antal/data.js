@@ -82,6 +82,7 @@ Data.format.FuzzyTime = {
         units = options.maxUnits || - 1;
 
         distribution.forEach(function (item) {
+            /* jshint maxcomplexity: 9 */
             if (done) {
                 return;
             }
@@ -123,6 +124,7 @@ Data.format.FuzzyTime = {
     var i;
 
     for (i in Data.format.FuzzyTime._units) {
+        /* istanbul ignore else */
         if (Data.format.FuzzyTime._units.hasOwnProperty(i)) {
             Data.format.FuzzyTime._lengths.push(parseInt(i, 10));
         }
@@ -132,6 +134,7 @@ Data.format.FuzzyTime = {
      * Ensure that our keys array is sorted, because the JS runtime does 
      * not guarranty the order on which the for in iterator returns the keys. 
      */
+    /* istanbul ignore next */
     Data.format.FuzzyTime._lengths.sort(function (a, b) {
         if (a > b) {
             return 1;

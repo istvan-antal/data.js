@@ -47,6 +47,7 @@ Data.format.Byte = {
     var i;
 
     for (i in Data.format.Byte._units) {
+        /* istanbul ignore else */
         if (Data.format.Byte._units.hasOwnProperty(i)) {
             Data.format.Byte._lengths.push({ power: parseInt(i, 10) });
         }
@@ -60,6 +61,7 @@ Data.format.Byte = {
      * Ensure that our keys array is sorted, because the JS runtime does 
      * not guarranty the order on which the for in iterator returns the keys. 
      */
+    /* istanbul ignore next */
     Data.format.Byte._lengths.sort(function (a, b) {
         if (a.power > b.power) {
             return 1;

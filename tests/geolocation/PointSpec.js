@@ -7,6 +7,7 @@ describe("Data.geolocation.Point", function() {
         expect(function () { new Data.geolocation.Point(false, false); }).toThrow();
         expect(function () { new Data.geolocation.Point([], []); }).toThrow();
         expect(function () { new Data.geolocation.Point(NaN, NaN); }).toThrow();
+        expect(function () { new Data.geolocation.Point(1, NaN); }).toThrow();
     });
 
     it("getters should return the correct values", function() {
@@ -19,6 +20,12 @@ describe("Data.geolocation.Point", function() {
 
         expect(point.getLatitude()).toEqual(51.498714933833);
         expect(point.getLongitude()).toEqual(-0.16011779913771);
+    });
+
+    it("should fail if trying get the distance from a non-point type", function () {
+        var point = new Data.geolocation.Point(51.498714933833, -0.16011779913771);
+
+        expect(function () { point.getDistanceFrom({}); }).toThrow();
     });
 
     it("should compute the correct distances", function() {

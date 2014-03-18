@@ -10,10 +10,11 @@
         "test": "grunt check"
     },
     "devDependencies": {
-        "grunt": "0.4.1",
+        "grunt": "*",
         "grunt-contrib-jshint": "*",
-        "grunt-contrib-jasmine": "0.5.2",
-        "grunt-jscs-checker": "0.3.2"
+        "grunt-contrib-jasmine": "*",
+        "grunt-jscs-checker": "*",
+        "grunt-template-jasmine-istanbul": "*"
     },
     "author": "István Miklós Antal <istvan.m.antal@gmail.com>",
     "license": "MIT"

@@ -7,6 +7,7 @@
  */
 
 var Data = {
+    assert: {},
     validate: {}, 
     geometry: {},
     geolocation: {},

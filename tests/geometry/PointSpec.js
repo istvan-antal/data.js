@@ -7,6 +7,7 @@ describe("Data.geometry.Point", function() {
         expect(function () { new Data.geometry.Point(false, false); }).toThrow();
         expect(function () { new Data.geometry.Point([], []); }).toThrow();
         expect(function () { new Data.geometry.Point(NaN, NaN); }).toThrow();
+        expect(function () { new Data.geometry.Point(1, NaN); }).toThrow();
     });
 
     it("getters should return the correct values", function() {

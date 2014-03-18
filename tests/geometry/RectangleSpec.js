@@ -7,6 +7,11 @@ describe("Data.geometry.Rectangle", function() {
         expect(function () { new Data.geometry.Rectangle(false, false, false, false); }).toThrow();
         expect(function () { new Data.geometry.Rectangle([], [], [], []); }).toThrow();
         expect(function () { new Data.geometry.Rectangle(NaN, NaN, NaN, NaN); }).toThrow();
+        expect(function () { new Data.geometry.Rectangle(1, NaN, NaN, NaN); }).toThrow();
+        expect(function () { new Data.geometry.Rectangle(1, 1, NaN, NaN); }).toThrow();
+        expect(function () { new Data.geometry.Rectangle(1, 1, 1, NaN); }).toThrow();
+        expect(function () { new Data.geometry.Rectangle(1, 1, -1, 1); }).toThrow();
+        expect(function () { new Data.geometry.Rectangle(1, 1, 1, -1); }).toThrow();
     });
 
     it("getters should return the correct values", function() {
