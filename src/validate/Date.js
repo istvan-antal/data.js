@@ -88,7 +88,7 @@ Data.validate.Date = {
             }
         }
 
-        if (day > daysInMonth) {
+        if (day <= 0 || day > daysInMonth) {
             result.message = 'Please enter a valid date.';
             result.isValid = false;
             return result;

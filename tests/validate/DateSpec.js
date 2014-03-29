@@ -42,4 +42,8 @@ describe("Date validator", function() {
         expect(Data.validate.Date.verifyISODateString('2001-02-30').isValid).toBe(false);
         expect(Data.validate.Date.verifyISODateString('2001-04-31').isValid).toBe(false);
     });
+    
+    it("should reject proper formats but 0 days", function() {
+        expect(Data.validate.Date.verifyISODateString('2000-01-00').isValid).toBe(false);
+    });
 });
